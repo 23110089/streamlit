@@ -8,19 +8,10 @@ url = st.text_input("Nhập URL của website muốn truy cập", "https://examp
 
 # Tạo nút để chạy Selenium
 if st.button("Truy cập web"):
-    # Cấu hình trình duyệt Chrome (Headless Mode)
     options = Options()
-    options.headless = True  # Chạy trình duyệt mà không mở cửa sổ
-
-    # Đường dẫn đến ChromeDriver
+    options.add_argument('--headless')
     driver = webdriver.Chrome(options=options)
-
-    # Truy cập trang web
-    driver.get(url); time.sleep(3)
-    
-    # Lấy tiêu đề trang web
+    driver.get("https://idx.google.com/"); time.sleep(3)
     title = driver.title
     st.write(f"Tiêu đề của trang web: {title}")
-    
-    # Đóng trình duyệt sau khi xong
     driver.quit()
