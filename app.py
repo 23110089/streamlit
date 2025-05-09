@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.title("Chào bạn đến với Streamlit 👋")
-st.write("Đây là app đầu tiên của mình 😄")
+st.title("Truy cập website")
+st.markdown("[Bấm vào đây để mở Google](https://www.google.com)")
