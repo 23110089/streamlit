@@ -19,19 +19,11 @@ if st.button("Truy cập web"):
     driver = webdriver.Chrome(options=options)
 
     # Truy cập trang web
-    driver.get(url)
-    
-    # Đợi trang load hoàn chỉnh (có thể thay đổi thời gian này tùy theo tốc độ load của trang)
-    time.sleep(3)
+    driver.get(url); time.sleep(3)
     
     # Lấy tiêu đề trang web
     title = driver.title
     st.write(f"Tiêu đề của trang web: {title}")
-    
-    # Lấy nội dung của trang (ví dụ: lấy tất cả các thẻ <p>)
-    paragraphs = driver.find_elements_by_tag_name("p")
-    for para in paragraphs:
-        st.write(para.text)
     
     # Đóng trình duyệt sau khi xong
     driver.quit()
