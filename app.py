@@ -3,9 +3,6 @@ from selenium.webdriver.chrome.options import Options
 import streamlit as st
 import time
 
-# Cấu hình Streamlit
-st.title("Truy cập web với Selenium")
-
 # Nhập URL từ người dùng
 url = st.text_input("Nhập URL của website muốn truy cập", "https://example.com")
 
