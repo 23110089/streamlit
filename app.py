@@ -1,3 +1,7 @@
 from requests import get
+from time import sleep
 import streamlit as st
-st.write(get('https://23110089.streamlit.app/').text)
+
+while True:
+  sleep(10)
+  st.write(get('https://23110089.streamlit.app/').text)
