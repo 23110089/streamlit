@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
-st.title("Truy cập website")
-st.markdown("[Bấm vào đây để mở Google](https://www.google.com)")
+st.title("Nhúng web trong Streamlit")
+components.iframe("https://www.google.com", height=600)
