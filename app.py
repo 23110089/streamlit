@@ -1,6 +1,5 @@
 from requests import get
 from time import sleep
-import streamlit as st
+from streamlit import empty; out = empty()
 
-out = st.empty()
 out.empty(); out.write('haha')
