@@ -6,9 +6,13 @@ out.empty(); out.write('há há')
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.add_argument('--headless')
 
 # Khởi động trình duyệt
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(options=options)
 
 # Mở trang web
 driver.get("https://www.google.com")
